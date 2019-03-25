@@ -5,7 +5,7 @@ from dominator import Dominator
 from unittest import TestCase
 
 from dominator.exceptions import InvalidTaxIDException, InvalidCPFException, InvalidCNPJException
-from tests.mocks import MockSERPRO
+from tests.mocks import MockSERPRO, MockDjangoUserModel
 
 
 class DominatorTestCase(TestCase):
@@ -109,3 +109,11 @@ class DominatorTestCase(TestCase):
                 }
             }
         )
+
+    def test_lock_user_account_if_invalid_tax_id(self):
+        with self.assertRaises(InvalidTaxIDException):
+            Dominator().validate_tax_id(
+                self.FAKE_CPFs[0],
+                mock=MockSERPRO.get_invalid(),
+                user=MockDjangoUserModel()
+            )

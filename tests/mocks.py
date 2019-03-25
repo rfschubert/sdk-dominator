@@ -15,3 +15,10 @@ class MockSERPRO:
     @staticmethod
     def get_invalid():
         return False
+
+
+class MockDjangoUserModel:
+
+    @staticmethod
+    def lock_account():
+        print("\nCalled MockDjangoUserModel.lock_account()")

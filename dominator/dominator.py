@@ -15,9 +15,15 @@ SERPRO = {
 
 class Dominator:
 
-    def validate_tax_id(self, tax_id, mock=None):
+    def validate_tax_id(self, tax_id, mock=None, user=None):
         if len(cpfcnpj.clear_punctuation(tax_id)) == 11:
             if not cpf.validate(tax_id):
+                if user is not None:
+                    try:
+                        user.lock_account()
+                    except:
+                        pass
+
                 raise InvalidCPFException
             else:
                 return self.validate_tax_id_cpf_against_serpro(tax_id, mock)
