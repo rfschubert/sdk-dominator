@@ -1,2 +1,2 @@
-# Python PIP Package Starter KIT
-This repository is an basic repo to allow quick start a new pip package repo.
+# SDK Dominator
+Based on `Dominator` gun from `Psycho-Pass`, it reads and analyzes user data to determine the risk of user on financial systems.
