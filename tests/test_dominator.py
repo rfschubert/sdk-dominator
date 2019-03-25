@@ -109,5 +109,3 @@ class DominatorTestCase(TestCase):
                 }
             }
         )
-
-# todo: lock user account
