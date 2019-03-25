@@ -20,5 +20,5 @@ class MockSERPRO:
 class MockDjangoUserModel:
 
     @staticmethod
-    def lock_account():
-        print("\nCalled MockDjangoUserModel.lock_account()")
+    def dominator_lock_account():
+        print("\nCalled MockDjangoUserModel.dominator_lock_account()")

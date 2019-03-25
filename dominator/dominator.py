@@ -20,13 +20,24 @@ class Dominator:
             if not cpf.validate(tax_id):
                 if user is not None:
                     try:
-                        user.lock_account()
+                        user.dominator_lock_account()
                     except:
                         pass
 
                 raise InvalidCPFException
             else:
-                return self.validate_tax_id_cpf_against_serpro(tax_id, mock)
+                try:
+                    serpro = self.validate_tax_id_cpf_against_serpro(tax_id, mock)
+                except:
+                    raise
+
+                if user is not None:
+                    try:
+                        user.dominator_is_valid_tax_id(serpro=serpro)
+                    except:
+                        pass
+
+                return serpro
 
         if len(cpfcnpj.clear_punctuation(tax_id)) == 14:
             if not cnpj.validate(tax_id):
