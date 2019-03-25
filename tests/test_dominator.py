@@ -1,8 +1,11 @@
+import pendulum
+
 from dominator import Dominator
 
 from unittest import TestCase
 
 from dominator.exceptions import InvalidTaxIDException, InvalidCPFException, InvalidCNPJException
+from tests.mocks import MockSERPRO
 
 
 class DominatorTestCase(TestCase):
@@ -44,10 +47,67 @@ class DominatorTestCase(TestCase):
         with self.assertRaises(InvalidCNPJException):
             Dominator().validate_tax_id(self.FAKE_CNPJs[1])
 
-        Dominator().validate_tax_id(self.TRUE_CPFs[0])
-        Dominator().validate_tax_id(self.TRUE_CPFs[1])
+        Dominator().validate_tax_id(self.TRUE_CPFs[0], mock=MockSERPRO.get_cpf_0770374910())
+        Dominator().validate_tax_id(self.TRUE_CPFs[1], mock=MockSERPRO.get_cpf_0770374910())
         Dominator().validate_tax_id(self.TRUE_CNPJs[0])
         Dominator().validate_tax_id(self.TRUE_CNPJs[1])
 
-# todo: validate against SERPRO
+    def test_validate_tax_id_cpf_against_serpro(self):
+        with self.assertRaises(InvalidCPFException):
+            Dominator().validate_tax_id_cpf_against_serpro(self.FAKE_CPFs[0], mock=MockSERPRO.get_invalid())
+
+        with self.assertRaises(InvalidCPFException):
+            Dominator().validate_tax_id_cpf_against_serpro(self.FAKE_CPFs[1], mock=MockSERPRO.get_invalid())
+
+        self.assertEqual(
+            Dominator().validate_tax_id_cpf_against_serpro(self.TRUE_CPFs[0], mock=MockSERPRO.get_cpf_0770374910()),
+            {
+                "tax_id": "077.703.749-10",
+                "name": "RAPHAEL FILIPE SCHUBERT",
+                "birthday": pendulum.date(year=1992, month=2, day=10),
+                "raw": {
+                    "ni": "07770374910",
+                    "nome": "RAPHAEL FILIPE SCHUBERT",
+                    "nascimento": "10021992",
+                    "situacao": {
+                        "codigo": "0", "descricao": "Regular"
+                    }
+                }
+            }
+        )
+
+        self.assertEqual(
+            Dominator().validate_tax_id_cpf_against_serpro(self.TRUE_CPFs[1], mock=MockSERPRO.get_cpf_0770374910()),
+            {
+                "tax_id": "077.703.749-10",
+                "name": "RAPHAEL FILIPE SCHUBERT",
+                "birthday": pendulum.datetime(year=1992, month=2, day=10).date(),
+                "raw": {
+                    "ni": "07770374910",
+                    "nome": "RAPHAEL FILIPE SCHUBERT",
+                    "nascimento": "10021992",
+                    "situacao": {
+                        "codigo": "0", "descricao": "Regular"
+                    }
+                }
+            }
+        )
+
+        self.assertEqual(
+            Dominator().validate_tax_id(self.TRUE_CPFs[0]),
+            {
+                "tax_id": "077.703.749-10",
+                "name": "RAPHAEL FILIPE SCHUBERT",
+                "birthday": pendulum.date(year=1992, month=2, day=10),
+                "raw": {
+                    "ni": "07770374910",
+                    "nome": "RAPHAEL FILIPE SCHUBERT",
+                    "nascimento": "10021992",
+                    "situacao": {
+                        "codigo": "0", "descricao": "Regular"
+                    }
+                }
+            }
+        )
+
 # todo: lock user account
