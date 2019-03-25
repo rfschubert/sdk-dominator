@@ -9,7 +9,7 @@ with open('LICENSE') as f:
 
 setup(
     name='sdk-dominator',
-    version='0.0.3',
+    version='0.0.4',
     description='Reads and store user data to validate Sibyl Score',
     long_description=readme,
     author='Raphael Schubert',

@@ -3,7 +3,7 @@ import json
 
 import requests, pendulum
 from pycpfcnpj import cpf, cnpj, cpfcnpj
-from .exceptions import InvalidCPFException, InvalidCNPJException
+from .exceptions import InvalidCPFException, InvalidCNPJException, InvalidTaxIDException
 
 SERPRO = {
     'api_url': 'https://apigateway.serpro.gov.br',
@@ -42,6 +42,10 @@ class Dominator:
         if len(cpfcnpj.clear_punctuation(tax_id)) == 14:
             if not cnpj.validate(tax_id):
                 raise InvalidCNPJException
+
+            return True
+
+        raise InvalidTaxIDException
 
     def validate_tax_id_cpf_against_serpro(self, cpf, mock=None):
         if mock is None:

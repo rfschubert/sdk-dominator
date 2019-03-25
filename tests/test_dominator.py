@@ -52,6 +52,10 @@ class DominatorTestCase(TestCase):
         Dominator().validate_tax_id(self.TRUE_CNPJs[0])
         Dominator().validate_tax_id(self.TRUE_CNPJs[1])
 
+    def test_raise_error_if_invalid_tax_id(self):
+        with self.assertRaises(InvalidTaxIDException):
+            Dominator().validate_tax_id("123")
+
     def test_validate_tax_id_cpf_against_serpro(self):
         with self.assertRaises(InvalidCPFException):
             Dominator().validate_tax_id_cpf_against_serpro(self.FAKE_CPFs[0], mock=MockSERPRO.get_invalid())
