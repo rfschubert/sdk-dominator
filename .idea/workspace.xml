@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d3f9c90-9c6c-4984-b1e1-46bd85fa27e5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/dominator/dominator.py" beforeDir="false" afterPath="$PROJECT_DIR$/dominator/dominator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dominator/coefficient.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_coefficient.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dominator/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/dominator/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_dominator.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_dominator.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,63 +15,51 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4369274">
+    <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tests/test_dominator.py">
+            <entry file="file://$PROJECT_DIR$/dominator/dominator.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="340">
-                  <caret line="164" column="12" selection-start-line="164" selection-start-column="12" selection-end-line="164" selection-end-column="12" />
+                <state relative-caret-position="115">
+                  <caret line="15" column="16" lean-forward="true" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
                   <folding>
-                    <element signature="e#0#15#0" expanded="true" />
-                    <element signature="e#228#539#0" />
-                    <element signature="e#140#164#0" />
-                    <element signature="e#314#338#0" />
-                    <element signature="e#425#449#0" />
-                    <element signature="e#515#539#0" />
-                    <element signature="e#681#1714#0" />
-                    <element signature="e#1782#1877#0" />
-                    <element signature="e#2188#2265#0" />
-                    <element signature="e#2400#2709#0" />
-                    <element signature="e#2871#3234#0" />
-                    <element signature="e#3095#3204#0" />
-                    <element signature="e#3246#3730#0" />
-                    <element signature="e#3437#3716#0" />
-                    <element signature="e#3613#3698#0" />
-                    <element signature="e#4068#4294#0" />
-                    <element signature="e#4127#4294#0" />
+                    <element signature="e#193#387#0" />
+                    <element signature="e#500#1421#0" />
+                    <element signature="e#561#1216#0" />
+                    <element signature="e#606#805#0" />
+                    <element signature="e#647#762#0" />
+                    <element signature="e#840#1216#0" />
+                    <element signature="e#1054#1185#0" />
+                    <element signature="e#1287#1384#0" />
+                    <element signature="e#1520#3439#0" />
+                    <element signature="e#1630#1746#0" />
+                    <element signature="e#1785#2478#0" />
+                    <element signature="e#1834#2137#0" />
+                    <element signature="e#1859#2069#0" />
+                    <element signature="e#1996#2069#0" />
+                    <element signature="e#2224#2412#0" />
+                    <element signature="e#2505#2587#0" />
+                    <element signature="e#2608#2934#0" />
+                    <element signature="e#3018#3414#0" />
+                    <element signature="e#3039#3338#0" />
+                    <element signature="e#3479#4136#0" />
+                    <element signature="e#3654#3777#0" />
+                    <element signature="e#3818#4097#0" />
+                    <element signature="e#3839#3968#0" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/setup.py">
+            <entry file="file://$PROJECT_DIR$/tests/test_coefficient.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="165">
-                  <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/README.md">
-              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-                <state split_layout="SPLIT">
-                  <first_editor relative-caret-position="345">
-                    <caret line="40" column="118" selection-start-line="40" selection-start-column="118" selection-end-line="40" selection-end-column="118" />
-                  </first_editor>
-                  <second_editor />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/tests/mocks.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="138">
-                  <caret line="32" selection-start-line="32" selection-end-line="32" />
+                <state relative-caret-position="167">
+                  <caret line="39" column="49" lean-forward="true" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
+                  <folding>
+                    <element signature="e#0#29#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -78,13 +69,10 @@
       <split-second>
         <leaf>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/dominator/dominator.py">
+            <entry file="file://$PROJECT_DIR$/dominator/coefficient.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="385">
-                  <caret line="97" column="53" selection-start-line="97" selection-start-column="53" selection-end-line="97" selection-end-column="53" />
-                  <folding>
-                    <element signature="e#0#13#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="207">
+                  <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
                 </state>
               </provider>
             </entry>
@@ -112,19 +100,20 @@
         <option value="$PROJECT_DIR$/src/exceptions.py" />
         <option value="$PROJECT_DIR$/src/__init__.py" />
         <option value="$PROJECT_DIR$/dominator/exceptions.py" />
-        <option value="$PROJECT_DIR$/dominator/__init__.py" />
-        <option value="$PROJECT_DIR$/tests/test_dominator.py" />
         <option value="$PROJECT_DIR$/tests/mocks.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/dominator/dominator.py" />
         <option value="$PROJECT_DIR$/setup.py" />
+        <option value="$PROJECT_DIR$/dominator/__init__.py" />
+        <option value="$PROJECT_DIR$/tests/test_dominator.py" />
+        <option value="$PROJECT_DIR$/tests/test_coefficient.py" />
+        <option value="$PROJECT_DIR$/dominator/coefficient.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="877" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="714" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -141,6 +130,11 @@
             <path>
               <item name="sdk-dominator" type="b2602c69:ProjectViewProjectNode" />
               <item name="sdk-dominator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sdk-dominator" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sdk-dominator" type="462c0819:PsiDirectoryNode" />
+              <item name="dominator" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sdk-dominator" type="b2602c69:ProjectViewProjectNode" />
@@ -168,7 +162,22 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python tests.pytest in test_coefficient.py">
+    <configuration name="pytest in test_coefficient.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="sdk-dominator" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_coefficient.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="pytest in test_dominator.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="sdk-dominator" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -186,6 +195,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest in test_coefficient.py" />
         <item itemvalue="Python tests.pytest in test_dominator.py" />
       </list>
     </recent_temporary>
@@ -204,35 +214,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="pytest_in_test_dominator_py - 2019.03.25 at 20h 15m 20s.xml">
-      <configuration name="pytest in test_dominator.py" configurationId="tests" />
+    <history-entry file="pytest_in_test_coefficient_py - 2019.03.26 at 01h 48m 56s.xml">
+      <configuration name="pytest in test_coefficient.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_in_test_dominator_py - 2019.03.25 at 20h 15m 59s.xml">
-      <configuration name="pytest in test_dominator.py" configurationId="tests" />
+    <history-entry file="pytest_in_test_coefficient_py - 2019.03.26 at 01h 49m 10s.xml">
+      <configuration name="pytest in test_coefficient.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_in_test_dominator_py - 2019.03.25 at 20h 42m 24s.xml">
-      <configuration name="pytest in test_dominator.py" configurationId="tests" />
+    <history-entry file="pytest_in_test_coefficient_py - 2019.03.26 at 01h 52m 59s.xml">
+      <configuration name="pytest in test_coefficient.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_in_test_dominator_py - 2019.03.25 at 20h 55m 04s.xml">
-      <configuration name="pytest in test_dominator.py" configurationId="tests" />
+    <history-entry file="pytest_in_test_coefficient_py - 2019.03.26 at 01h 53m 14s.xml">
+      <configuration name="pytest in test_coefficient.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_in_test_dominator_py - 2019.03.25 at 20h 55m 29s.xml">
-      <configuration name="pytest in test_dominator.py" configurationId="tests" />
+    <history-entry file="pytest_in_test_coefficient_py - 2019.03.26 at 01h 53m 22s.xml">
+      <configuration name="pytest in test_coefficient.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_in_test_dominator_py - 2019.03.25 at 20h 56m 42s.xml">
-      <configuration name="pytest in test_dominator.py" configurationId="tests" />
+    <history-entry file="pytest_in_test_coefficient_py - 2019.03.26 at 01h 53m 32s.xml">
+      <configuration name="pytest in test_coefficient.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_in_test_dominator_py - 2019.03.25 at 20h 57m 54s.xml">
-      <configuration name="pytest in test_dominator.py" configurationId="tests" />
+    <history-entry file="pytest_in_test_coefficient_py - 2019.03.26 at 01h 54m 08s.xml">
+      <configuration name="pytest in test_coefficient.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_in_test_dominator_py - 2019.03.25 at 20h 59m 19s.xml">
-      <configuration name="pytest in test_dominator.py" configurationId="tests" />
+    <history-entry file="pytest_in_test_coefficient_py - 2019.03.26 at 02h 07m 56s.xml">
+      <configuration name="pytest in test_coefficient.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_in_test_dominator_py - 2019.03.25 at 21h 00m 03s.xml">
-      <configuration name="pytest in test_dominator.py" configurationId="tests" />
+    <history-entry file="pytest_in_test_coefficient_py - 2019.03.26 at 02h 08m 07s.xml">
+      <configuration name="pytest in test_coefficient.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="pytest_in_test_dominator_py - 2019.03.25 at 21h 04m 53s.xml">
-      <configuration name="pytest in test_dominator.py" configurationId="tests" />
+    <history-entry file="pytest_in_test_coefficient_py - 2019.03.26 at 02h 09m 08s.xml">
+      <configuration name="pytest in test_coefficient.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -245,23 +255,23 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15785764" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10007047" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Python Console" weight="0.32923833" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.16830467" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32923833" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2972973" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.43120393" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32923833" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.15356265" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32923833" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -275,13 +285,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/foo_bar.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="20" lean-forward="true" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/foo_bar.py" />
     <entry file="file://$PROJECT_DIR$/tests/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -297,16 +301,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dominator/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="25" lean-forward="true" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dominator/exceptions.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
@@ -314,63 +308,121 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/mocks.py">
+    <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/test_dominator.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="164" column="12" selection-start-line="164" selection-start-column="12" selection-end-line="164" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#228#539#0" />
-            <element signature="e#140#164#0" />
-            <element signature="e#314#338#0" />
-            <element signature="e#425#449#0" />
-            <element signature="e#515#539#0" />
-            <element signature="e#681#1714#0" />
-            <element signature="e#1782#1877#0" />
-            <element signature="e#2188#2265#0" />
-            <element signature="e#2400#2709#0" />
-            <element signature="e#2871#3234#0" />
-            <element signature="e#3095#3204#0" />
-            <element signature="e#3246#3730#0" />
-            <element signature="e#3437#3716#0" />
-            <element signature="e#3613#3698#0" />
-            <element signature="e#4068#4294#0" />
-            <element signature="e#4127#4294#0" />
-          </folding>
+        <state relative-caret-position="115">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="345">
+          <first_editor relative-caret-position="349">
             <caret line="40" column="118" selection-start-line="40" selection-start-column="118" selection-end-line="40" selection-end-column="118" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/mocks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dominator/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="36" selection-start-line="1" selection-start-column="36" selection-end-line="1" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/dominator/dominator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="97" column="53" selection-start-line="97" selection-start-column="53" selection-end-line="97" selection-end-column="53" />
+        <state relative-caret-position="115">
+          <caret line="15" column="16" lean-forward="true" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#193#387#0" />
+            <element signature="e#500#1421#0" />
+            <element signature="e#561#1216#0" />
+            <element signature="e#606#805#0" />
+            <element signature="e#647#762#0" />
+            <element signature="e#840#1216#0" />
+            <element signature="e#1054#1185#0" />
+            <element signature="e#1287#1384#0" />
+            <element signature="e#1520#3439#0" />
+            <element signature="e#1630#1746#0" />
+            <element signature="e#1785#2478#0" />
+            <element signature="e#1834#2137#0" />
+            <element signature="e#1859#2069#0" />
+            <element signature="e#1996#2069#0" />
+            <element signature="e#2224#2412#0" />
+            <element signature="e#2505#2587#0" />
+            <element signature="e#2608#2934#0" />
+            <element signature="e#3018#3414#0" />
+            <element signature="e#3039#3338#0" />
+            <element signature="e#3479#4136#0" />
+            <element signature="e#3654#3777#0" />
+            <element signature="e#3818#4097#0" />
+            <element signature="e#3839#3968#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/setup.py">
+    <entry file="file://$PROJECT_DIR$/tests/test_dominator.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+        <state relative-caret-position="46">
+          <caret line="2" column="31" lean-forward="true" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+          <folding>
+            <element signature="e#321#655#0" />
+            <element signature="e#338#393#0" />
+            <element signature="e#421#483#0" />
+            <element signature="e#510#565#0" />
+            <element signature="e#593#655#0" />
+            <element signature="e#701#1734#0" />
+            <element signature="e#1794#1887#0" />
+            <element signature="e#1952#4175#0" />
+            <element signature="e#2425#2909#0" />
+            <element signature="e#2616#2895#0" />
+            <element signature="e#2792#2877#0" />
+            <element signature="e#3076#3571#0" />
+            <element signature="e#3278#3557#0" />
+            <element signature="e#3454#3539#0" />
+            <element signature="e#3681#4165#0" />
+            <element signature="e#3872#4151#0" />
+            <element signature="e#4048#4133#0" />
+            <element signature="e#4241#4467#0" />
+            <element signature="e#4300#4467#0" />
+            <element signature="e#4522#6561#0" />
+            <element signature="e#4705#5189#0" />
+            <element signature="e#4896#5175#0" />
+            <element signature="e#5072#5157#0" />
+            <element signature="e#5398#5882#0" />
+            <element signature="e#5589#5868#0" />
+            <element signature="e#5765#5850#0" />
+            <element signature="e#6067#6551#0" />
+            <element signature="e#6258#6537#0" />
+            <element signature="e#6434#6519#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dominator/coefficient.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/test_coefficient.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="39" column="49" lean-forward="true" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

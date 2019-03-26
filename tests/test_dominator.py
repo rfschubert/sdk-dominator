@@ -174,3 +174,6 @@ class DominatorTestCase(TestCase):
                 }
             }
         )
+
+    def test_calculate_user_coefficient(self):
+        pass
