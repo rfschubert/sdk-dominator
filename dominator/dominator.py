@@ -15,7 +15,7 @@ SERPRO = {
 
 class Dominator:
 
-    def validate_tax_id(self, tax_id, mock=None, user=None):
+    def validate_tax_id(self, tax_id, mock=None, user=None, cpf_django_model=None):
         if len(cpfcnpj.clear_punctuation(tax_id)) == 11:
             if not cpf.validate(tax_id):
                 if user is not None:
@@ -27,7 +27,7 @@ class Dominator:
                 raise InvalidCPFException
             else:
                 try:
-                    serpro = self.validate_tax_id_cpf_against_serpro(tax_id, mock)
+                    serpro = self.validate_tax_id_cpf_against_serpro(tax_id, mock, cpf_django_model)
                 except:
                     raise
 
@@ -47,20 +47,32 @@ class Dominator:
 
         raise InvalidTaxIDException
 
-    def validate_tax_id_cpf_against_serpro(self, cpf, mock=None):
+    def validate_tax_id_cpf_against_serpro(self, cpf, mock=None, cpf_django_model=None):
         if mock is None:
-            URL = SERPRO['api_url'] + "/consulta-cpf/v1/cpf/{}".format(cpfcnpj.clear_punctuation(cpf))
+            if cpf_django_model is not None:
+                try:
+                    cpf_model_object = cpf_django_model.objects.get(cpf=cpf)
+                    if cpf_model_object.raw_data == {}:
+                        cpf_model_object.delete()
+                        cpf_model_object = None
+                except:
+                    cpf_model_object = None
 
-            headers = {
-                'Authorization': 'Bearer ' + self.get_auth_token(),
-                'Accept': 'application/json'
-            }
+            if cpf_django_model is None or cpf_model_object is None:
+                URL = SERPRO['api_url'] + "/consulta-cpf/v1/cpf/{}".format(cpfcnpj.clear_punctuation(cpf))
 
-            response = requests.get(URL, headers=headers)
-            if response.status_code == 400:
-                raise InvalidCPFException
+                headers = {
+                    'Authorization': 'Bearer ' + self.get_auth_token(),
+                    'Accept': 'application/json'
+                }
 
-            raw = json.loads(response.text)
+                response = requests.get(URL, headers=headers)
+                if response.status_code == 400:
+                    raise InvalidCPFException
+
+                raw = json.loads(response.text)
+            else:
+                raw = cpf_model_object.raw_data
         else:
             if mock is False:
                 raise InvalidCPFException

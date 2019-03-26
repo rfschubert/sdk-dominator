@@ -5,7 +5,7 @@ from dominator import Dominator
 from unittest import TestCase
 
 from dominator.exceptions import InvalidTaxIDException, InvalidCPFException, InvalidCNPJException
-from tests.mocks import MockSERPRO, MockDjangoUserModel
+from tests.mocks import MockSERPRO, MockDjangoUserModel, MockDjangoCPFModel
 
 
 class DominatorTestCase(TestCase):
@@ -121,3 +121,56 @@ class DominatorTestCase(TestCase):
                 mock=MockSERPRO.get_invalid(),
                 user=MockDjangoUserModel()
             )
+
+    def test_get_from_database_django(self):
+        # cpf exists, raw data is None
+        self.assertEqual(
+            Dominator().validate_tax_id("077.703.749-10", cpf_django_model=MockDjangoCPFModel().get("raw_data")),
+            {
+                "tax_id": "077.703.749-10",
+                "name": "RAPHAEL FILIPE SCHUBERT",
+                "birthday": pendulum.date(year=1992, month=2, day=10),
+                "raw": {
+                    "ni": "07770374910",
+                    "nome": "RAPHAEL FILIPE SCHUBERT",
+                    "nascimento": "10021992",
+                    "situacao": {
+                        "codigo": "0", "descricao": "Regular"
+                    }
+                }
+            }
+        )
+        # cpf exists, raw data is Valid
+        self.assertEqual(
+            Dominator().validate_tax_id("077.703.749-10", cpf_django_model=MockDjangoCPFModel().get("077.703.749-10")),
+            {
+                "tax_id": "077.703.749-10",
+                "name": "RAPHAEL FILIPE SCHUBERT",
+                "birthday": pendulum.date(year=1992, month=2, day=10),
+                "raw": {
+                    "ni": "07770374910",
+                    "nome": "RAPHAEL FILIPE SCHUBERT",
+                    "nascimento": "10021992",
+                    "situacao": {
+                        "codigo": "0", "descricao": "Regular"
+                    }
+                }
+            }
+        )
+        # cpf do not exists
+        self.assertEqual(
+            Dominator().validate_tax_id("077.703.749-10", cpf_django_model=MockDjangoCPFModel().get(None)),
+            {
+                "tax_id": "077.703.749-10",
+                "name": "RAPHAEL FILIPE SCHUBERT",
+                "birthday": pendulum.date(year=1992, month=2, day=10),
+                "raw": {
+                    "ni": "07770374910",
+                    "nome": "RAPHAEL FILIPE SCHUBERT",
+                    "nascimento": "10021992",
+                    "situacao": {
+                        "codigo": "0", "descricao": "Regular"
+                    }
+                }
+            }
+        )

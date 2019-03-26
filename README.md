@@ -36,4 +36,6 @@ Sample `CPF` answer parameter:
 ``` 
 
 It will be sended as `serpro` parameter, so you will need an method like:
-`def dominator_is_valid_tax_id(self, *args, **kwargs)` than you will be able to access it as `serpro['tax_id']` or any data inside it. 
+`def dominator_is_valid_tax_id(self, *args, **kwargs)` than you will be able to access it as `serpro['tax_id']` or any data inside it.
+
+You can provide an `cpf_django_model` on `validate_tax_id` method that will try find and store SERPRO CPF on database. 
