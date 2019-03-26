@@ -36,12 +36,24 @@ class CoefficientTestCase(TestCase):
         coefficient.apply('INVALID_TAX_ID')
         coefficient.apply('INVALID_TAX_ID')
         self.assertEqual(coefficient.COEFFICIENT, 100)
-        coefficient\
-            .apply('EMAIL_CONTAINS_CLIENT_NAME')\
-            .apply('PHONE_INFORMED')\
+        coefficient \
+            .apply('EMAIL_CONTAINS_CLIENT_NAME') \
+            .apply('PHONE_INFORMED') \
             .apply('CRIME_HISTORY_FEDERAL_DATABASES')
         self.assertEqual(coefficient.COEFFICIENT, 110)
         self.assertIn('INVALID_TAX_ID', coefficient.APPLIED_RULES)
         self.assertIn('PHONE_INFORMED', coefficient.APPLIED_RULES)
         self.assertIn('CRIME_HISTORY_FEDERAL_DATABASES', coefficient.APPLIED_RULES)
         self.assertIn('EMAIL_CONTAINS_CLIENT_NAME', coefficient.APPLIED_RULES)
+
+    def test_calculate_with_base_coefficient_and_rules(self):
+        coefficient = Coefficient()
+        coefficient.apply(
+            'BILLET_FRAUD_IDENTIFIED',
+            base_coefficient=110,
+            applied_rules=[
+                'INVALID_TAX_ID', 'EMAIL_CONTAINS_CLIENT_NAME',
+                'PHONE_INFORMED', 'CRIME_HISTORY_FEDERAL_DATABASES'
+            ]
+        )
+        self.assertEqual(145, coefficient.COEFFICIENT)

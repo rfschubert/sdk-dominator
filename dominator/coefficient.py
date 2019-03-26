@@ -2,7 +2,13 @@ class Coefficient:
     APPLIED_RULES = []
     COEFFICIENT = 0
 
-    def apply(self, rule):
+    def apply(self, rule, base_coefficient=None, applied_rules=None):
+        if base_coefficient is not None:
+            self.COEFFICIENT = base_coefficient
+
+        if applied_rules is not None:
+            self.APPLIED_RULES = applied_rules
+
         if rule not in self.APPLIED_RULES:
             self.APPLIED_RULES.append(rule)
 
