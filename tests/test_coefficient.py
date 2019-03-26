@@ -41,5 +41,7 @@ class CoefficientTestCase(TestCase):
             .apply('PHONE_INFORMED')\
             .apply('CRIME_HISTORY_FEDERAL_DATABASES')
         self.assertEqual(coefficient.COEFFICIENT, 110)
-        del coefficient
-
+        self.assertIn('INVALID_TAX_ID', coefficient.APPLIED_RULES)
+        self.assertIn('PHONE_INFORMED', coefficient.APPLIED_RULES)
+        self.assertIn('CRIME_HISTORY_FEDERAL_DATABASES', coefficient.APPLIED_RULES)
+        self.assertIn('EMAIL_CONTAINS_CLIENT_NAME', coefficient.APPLIED_RULES)

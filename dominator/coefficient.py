@@ -3,18 +3,16 @@ class Coefficient:
     COEFFICIENT = 0
 
     def apply(self, rule):
-        new_rule = {
-            rule: self.check_rule_value(rule)
-        }
-        if new_rule not in self.APPLIED_RULES:
-            self.APPLIED_RULES.append(new_rule)
-            self.calculate()
+        if rule not in self.APPLIED_RULES:
+            self.APPLIED_RULES.append(rule)
+
+        self.calculate()
         return self
 
     def calculate(self):
         self.COEFFICIENT = 0
         for rule in self.APPLIED_RULES:
-            self.COEFFICIENT += rule[list(rule)[0]]
+            self.COEFFICIENT += self.check_rule_value(rule)
 
         if self.COEFFICIENT < 0:
             self.COEFFICIENT = 0

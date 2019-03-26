@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0d3f9c90-9c6c-4984-b1e1-46bd85fa27e5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/dominator/coefficient.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_coefficient.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dominator/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/dominator/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_dominator.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_dominator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dominator/coefficient.py" beforeDir="false" afterPath="$PROJECT_DIR$/dominator/coefficient.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_coefficient.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_coefficient.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,8 +53,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/tests/test_coefficient.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="167">
-                  <caret line="39" column="49" lean-forward="true" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
+                <state relative-caret-position="311">
+                  <caret line="46" column="49" selection-start-line="46" selection-start-column="49" selection-end-line="46" selection-end-column="49" />
                   <folding>
                     <element signature="e#0#29#0" expanded="true" />
                   </folding>
@@ -72,7 +70,7 @@
             <entry file="file://$PROJECT_DIR$/dominator/coefficient.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="207">
-                  <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+                  <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
                 </state>
               </provider>
             </entry>
@@ -106,8 +104,8 @@
         <option value="$PROJECT_DIR$/setup.py" />
         <option value="$PROJECT_DIR$/dominator/__init__.py" />
         <option value="$PROJECT_DIR$/tests/test_dominator.py" />
-        <option value="$PROJECT_DIR$/tests/test_coefficient.py" />
         <option value="$PROJECT_DIR$/dominator/coefficient.py" />
+        <option value="$PROJECT_DIR$/tests/test_coefficient.py" />
       </list>
     </option>
   </component>
@@ -214,34 +212,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="pytest_in_test_coefficient_py - 2019.03.26 at 01h 48m 56s.xml">
-      <configuration name="pytest in test_coefficient.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test_coefficient_py - 2019.03.26 at 01h 49m 10s.xml">
-      <configuration name="pytest in test_coefficient.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test_coefficient_py - 2019.03.26 at 01h 52m 59s.xml">
-      <configuration name="pytest in test_coefficient.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test_coefficient_py - 2019.03.26 at 01h 53m 14s.xml">
-      <configuration name="pytest in test_coefficient.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test_coefficient_py - 2019.03.26 at 01h 53m 22s.xml">
-      <configuration name="pytest in test_coefficient.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test_coefficient_py - 2019.03.26 at 01h 53m 32s.xml">
-      <configuration name="pytest in test_coefficient.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test_coefficient_py - 2019.03.26 at 01h 54m 08s.xml">
-      <configuration name="pytest in test_coefficient.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test_coefficient_py - 2019.03.26 at 02h 07m 56s.xml">
-      <configuration name="pytest in test_coefficient.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="pytest_in_test_coefficient_py - 2019.03.26 at 02h 08m 07s.xml">
-      <configuration name="pytest in test_coefficient.py" configurationId="tests" />
-    </history-entry>
     <history-entry file="pytest_in_test_coefficient_py - 2019.03.26 at 02h 09m 08s.xml">
+      <configuration name="pytest in test_coefficient.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_coefficient_py - 2019.03.26 at 02h 25m 53s.xml">
+      <configuration name="pytest in test_coefficient.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_coefficient_py - 2019.03.26 at 02h 26m 15s.xml">
+      <configuration name="pytest in test_coefficient.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_coefficient_py - 2019.03.26 at 02h 26m 34s.xml">
+      <configuration name="pytest in test_coefficient.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_coefficient_py - 2019.03.26 at 02h 26m 43s.xml">
+      <configuration name="pytest in test_coefficient.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_coefficient_py - 2019.03.26 at 02h 26m 50s.xml">
+      <configuration name="pytest in test_coefficient.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_coefficient_py - 2019.03.26 at 02h 27m 25s.xml">
+      <configuration name="pytest in test_coefficient.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_coefficient_py - 2019.03.26 at 02h 27m 38s.xml">
+      <configuration name="pytest in test_coefficient.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_coefficient_py - 2019.03.26 at 02h 27m 40s.xml">
+      <configuration name="pytest in test_coefficient.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="pytest_in_test_coefficient_py - 2019.03.26 at 02h 27m 51s.xml">
       <configuration name="pytest in test_coefficient.py" configurationId="tests" />
     </history-entry>
   </component>
@@ -269,7 +267,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32923833" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.15356265" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.35380834" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32923833" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -412,14 +410,14 @@
     <entry file="file://$PROJECT_DIR$/dominator/coefficient.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
-          <caret line="9" column="46" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/test_coefficient.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="39" column="49" lean-forward="true" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
+        <state relative-caret-position="311">
+          <caret line="46" column="49" selection-start-line="46" selection-start-column="49" selection-end-line="46" selection-end-column="49" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
