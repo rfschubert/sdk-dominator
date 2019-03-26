@@ -48,6 +48,13 @@ class Dominator:
         raise InvalidTaxIDException
 
     def validate_tax_id_cpf_against_serpro(self, cpf, mock=None, cpf_django_model=None):
+        URL = SERPRO['api_url'] + "/consulta-cpf/v1/cpf/{}".format(cpfcnpj.clear_punctuation(cpf))
+
+        headers = {
+            'Authorization': 'Bearer ' + self.get_auth_token(),
+            'Accept': 'application/json'
+        }
+
         if mock is None:
             if cpf_django_model is not None:
                 try:
@@ -59,13 +66,6 @@ class Dominator:
                     cpf_model_object = None
 
             if cpf_django_model is None or cpf_model_object is None:
-                URL = SERPRO['api_url'] + "/consulta-cpf/v1/cpf/{}".format(cpfcnpj.clear_punctuation(cpf))
-
-                headers = {
-                    'Authorization': 'Bearer ' + self.get_auth_token(),
-                    'Accept': 'application/json'
-                }
-
                 response = requests.get(URL, headers=headers)
                 if response.status_code == 400:
                     raise InvalidCPFException
@@ -78,12 +78,26 @@ class Dominator:
                 raise InvalidCPFException
             raw = mock
 
-        return {
+        response = {
             "tax_id": "{}.{}.{}-{}".format(raw["ni"][:3], raw["ni"][3:6], raw["ni"][6:9], raw["ni"][9:11]),
             "name": raw["nome"],
             "birthday": pendulum.datetime(year=int(raw["nascimento"][4:8]), month=int(raw["nascimento"][2:4]), day=int(raw["nascimento"][:2])).date(),
             "raw": raw
         }
+
+        if cpf_django_model is not None and cpf_model_object is None:
+            try:
+                cpf_django_model.objects.create(
+                    cpf=response["tax_id"],
+                    nome=response["name"],
+                    situacao=response["raw"]["situacao"],
+                    data_nascimento=response["birthday"],
+                    raw_data=response["raw"],
+                )
+            except:
+                print("error on store CPF on database")
+
+        return response
 
     def get_auth_token(self):
         SECRET = base64.b64encode(str(SERPRO['consumer_key'] + ":" + SERPRO['consumer_secret']).encode()).decode()
